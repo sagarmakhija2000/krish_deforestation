@@ -1,0 +1,110 @@
+{
+  "status": "trained",
+  "source": "https://zenodo.org/records/4498086",
+  "task": "forest_non_forest_segmentation",
+  "trained_for_deforestation_labels": false,
+  "deforestation_method": "forest mask before AND non-forest mask after",
+  "device": "cpu",
+  "epochs": 10,
+  "batch_size": 2,
+  "training_samples_used": 100,
+  "training_samples_available": 499,
+  "validation_samples_used": 10,
+  "validation_samples_available": 100,
+  "threshold": 0.5,
+  "dataset_inspection": {
+    "source": "https://zenodo.org/records/4498086",
+    "task": "forest/non-forest semantic segmentation",
+    "root": "C:\\Users\\sagar\\Desktop\\personal\\krish\\Deforestation Model\\forest_monitoring\\data\\amazon_sentinel",
+    "split_counts": {
+      "train": {
+        "images": 499,
+        "paired_masks": 499
+      },
+      "validation": {
+        "images": 100,
+        "paired_masks": 100
+      },
+      "test": {
+        "images": 20,
+        "paired_masks": 20
+      }
+    },
+    "labelled_pairs": 619,
+    "example": {
+      "split": "test",
+      "biome": "amazon",
+      "image_path": "C:\\Users\\sagar\\Desktop\\personal\\krish\\Deforestation Model\\forest_monitoring\\data\\amazon_sentinel\\AMAZON\\Test\\image\\S2A_MSIL2A_20200111T142701_N0213_R053_T20NQG_20200111T164651_01_06.tif",
+      "image_shape_chw": [
+        4,
+        512,
+        512
+      ],
+      "image_dtype": "uint16",
+      "image_value_range": [
+        20.0,
+        7000.0
+      ],
+      "image_metadata": {
+        "width": 512,
+        "height": 512,
+        "count": 4,
+        "dtype": "uint16",
+        "crs": "EPSG:32620",
+        "transform": [
+          10.0,
+          0.0,
+          725560.0,
+          0.0,
+          -10.0,
+          200040.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          725560.0,
+          194920.0,
+          730680.0,
+          200040.0
+        ]
+      },
+      "mask_path": "C:\\Users\\sagar\\Desktop\\personal\\krish\\Deforestation Model\\forest_monitoring\\data\\amazon_sentinel\\AMAZON\\Test\\mask\\S2A_MSIL2A_20200111T142701_N0213_R053_T20NQG_20200111T164651_01_06.tif",
+      "mask_shape_hw": [
+        512,
+        512
+      ],
+      "mask_dtype": "uint8",
+      "mask_value_range_raw": [
+        0,
+        1
+      ],
+      "mask_classes_raw": [
+        0,
+        1
+      ],
+      "mask_classes_meaning": {
+        "0": "non-forest",
+        "1 or 255": "forest"
+      }
+    }
+  },
+  "validation": {
+    "loss": 0.24758166819810867,
+    "precision": 0.9606815880584473,
+    "recall": 0.978965853254767,
+    "f1": 0.9697375365023638,
+    "iou": 0.9412529142482917,
+    "dice": 0.969737541501924
+  },
+  "test": {
+    "loss": 0.19704403467476367,
+    "precision": 0.9539400653663583,
+    "recall": 0.984162423972526,
+    "f1": 0.9688155991499053,
+    "iou": 0.9395173240076736,
+    "dice": 0.9688156041486912
+  },
+  "test_visualization": "C:\\Users\\sagar\\Desktop\\personal\\krish\\Deforestation Model\\forest_monitoring\\outputs\\forest_segmentation_test_predictions.png",
+  "training_visualization": "C:\\Users\\sagar\\Desktop\\personal\\krish\\Deforestation Model\\forest_monitoring\\outputs\\forest_segmentation_examples.png"
+}

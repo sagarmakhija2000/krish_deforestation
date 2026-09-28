@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Public training datasets and derived tabular cache (download/place locally).
+forest_monitoring/data/amazon_sentinel/
+forest_monitoring/data/aligned_temporal_pairs/
+forest_monitoring/data/fire/Algerian_forest_fires_dataset_UPDATE.csv
+forest_monitoring/data/fire/fire_features.csv
+forest_monitoring/data/Output/

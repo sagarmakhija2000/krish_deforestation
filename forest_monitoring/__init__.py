@@ -1,0 +1,1 @@
+"""Academic forest monitoring prototype."""
